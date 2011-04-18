@@ -1,0 +1,2 @@
+#!/bin/bash
+gpg --batch -q -d ~/.shellsecrets.gpg | grep $1 |sed "s/${1}: \(.*\)/\1/g"
