@@ -1,4 +1,4 @@
 #!/bin/bash
 # * * * * * $HOME/bin/mailsync #in crontab
-eval `cat $HOME/.gpg-agent-info`
-/usr/bin/offlineimap -u Noninteractive.Quiet &2>/dev/null
+export $(gnome-keyring-daemon -s)
+/usr/bin/offlineimap -o -u Noninteractive.Quiet &2>/dev/null
