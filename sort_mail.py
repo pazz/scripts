@@ -35,7 +35,7 @@ tag('from:wols', 'soc','wols')
 
 #UoE
 tag('folder:uoe/Call4Papers', 'C4P')
-tag('to:lfcs', 'lfcs')
+_list('lfcs-interest@inf.ed.ac.uk', 'lfcs')
 _list('students@inf.ed.ac.uk', 'students')
 _list('research-degree-students@inf.ed.ac.uk', 'gradschool')
 _list('sicsa-students@sicsa.ac.uk', 'sicsa')
@@ -88,7 +88,7 @@ tag_search(db, 'tag:new and tag:sent', '-unseen', '-new', '-unread', '+watch')
 # Update watch tag
 for msg in q_new.search_messages():
     q = notmuch.Query(db, 'tag:watch and thread:%s' % msg.get_thread_id())
-    if len(q.search_messages()) > 0:
+    if len(list(q.search_messages())) > 0:
         logging.debug('watching %s' % msg.get_message_id())
         msg.add_tag('watch')
 
@@ -99,7 +99,7 @@ tag_search(db, 'tag:new and tag:watch', '+inbox', '-new')
 q = notmuch.Query(db, 'tag:new and tag:list')
 for msg in q.search_messages():
     q2 = notmuch.Query(db, 'thread:%s and not tag:unseen' % msg.get_thread_id())
-    if len(q2.search_messages()) > 0:
+    if len(list(q2.search_messages())) > 0:
         msg.remove_tag('unseen')
         msg.remove_tag('new')
 
@@ -115,3 +115,12 @@ for msg in q_new.search_messages():
 
 end_time = time.time()
 logging.info('Sorted %d messages in %1.2f seconds' % (n_msgs, end_time - start_time))
+pic = '/usr/share/icons/Human/scalable/emblems/emblem-mail.svg'
+topic = '\"new mail\"'
+
+q = notmuch.Query(db, 'tag:inbox AND NOT tag:killed')
+count = q.count_messages()
+if count:
+    msg = '\"there are currently %d messages in your inbox\"'%count
+    notify_cmd="/usr/bin/notify-send -t 5 -i %s %s %s"%(pic, topic, msg)
+    os.system(notify_cmd)
