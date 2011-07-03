@@ -9,38 +9,29 @@ import notmuch
 
 LOGLEVEL = logging.INFO
 
-_tags = []
 start_time = time.time()
 
-def _list(name, tag):
-        _tags.append( ('to:%s'%name, ['list', tag]) )
+_tags = [
+        ('peergroup', ['list','peergroup']),
+        ('urwid', ['list','urwid']),
+        ('notmuch', ['list','notmuch']),
+        ('atp-vim-list@lists.sourceforge.net', ['list','atp']),
+        ('sup-talk@rubyforge.org OR sup-devel@rubyforge.org', ['list','sup']),
 
-def tag(filter, *tags):
-        _tags.append( (filter, tags) )
+        ('lfcs-interest@inf.ed.ac.uk', ['list','lfcs']),
+        ('students@inf.ed.ac.uk', ['list','students']),
+        ('research-degree-students@inf.ed.ac.uk', ['list','gradschool']),
+        ('sicsa-students@sicsa.ac.uk', ['list','sicsa']),
+        ('automata-team@fit.vutbr.cz', ['list','automata']),
+        ('agda-course@inf.ed.ac.uk', ['list','agda']),
+        ('folder:uoe/Call4Papers', 'C4P'),
 
-#send by me
-tag('from:Patrick Totzke', 'sent')
+        ('from:Patrick Totzke', ['sent']), #send by me
+        ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
+        ('from:wols', ['soc','wols']), # whiskey soc
+        ]
 
-#lists
-_list('peergroup', 'peergroup')
-_list('urwid', 'urwid')
-_list('notmuch', 'notmuch')
-_list('atp-vim-list@lists.sourceforge.net', 'atp')
-_list('sup-talk@rubyforge.org', 'sup')
-_list('sup-devel@rubyforge.org', 'sup')
 
-#societies
-tag('from:foosoc.ed@gmail.com or from:GT Silber', 'soc','foo')
-tag('from:wols', 'soc','wols')
-
-#UoE
-tag('folder:uoe/Call4Papers', 'C4P')
-_list('lfcs-interest@inf.ed.ac.uk', 'lfcs')
-_list('students@inf.ed.ac.uk', 'students')
-_list('research-degree-students@inf.ed.ac.uk', 'gradschool')
-_list('sicsa-students@sicsa.ac.uk', 'sicsa')
-_list('automata-team@fit.vutbr.cz', 'automata')
-_list('agda-course@inf.ed.ac.uk', 'agda')
 
 
 #############################################
