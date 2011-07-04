@@ -15,6 +15,7 @@ _tags = [
         ('peergroup', ['list','peergroup']),
         ('urwid', ['list','urwid']),
         ('notmuch', ['list','notmuch']),
+        ('notmuch and emacs', ['-inbox']),
         ('atp-vim-list@lists.sourceforge.net', ['list','atp']),
         ('sup-talk@rubyforge.org OR sup-devel@rubyforge.org', ['list','sup']),
 
@@ -24,7 +25,7 @@ _tags = [
         ('sicsa-students@sicsa.ac.uk', ['list','sicsa']),
         ('automata-team@fit.vutbr.cz', ['list','automata']),
         ('agda-course@inf.ed.ac.uk', ['list','agda']),
-        ('folder:uoe/Call4Papers', 'C4P'),
+        ('folder:uoe/Call4Papers', ['C4P']),
 
         ('from:Patrick Totzke', ['sent','-unread']), #send by me
         ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
@@ -65,6 +66,8 @@ for msg in q_new.search_messages():
     msg.freeze()
     n_msgs += 1
 
+# put all in inbox
+tag_search(db, 'tag:new', '+inbox')
 
 # Tag things
 for filter, tags in _tags:
@@ -81,7 +84,7 @@ for msg in q_new.search_messages():
         tag_message(msg, 'killed', '-new')
 
 # Tag remaining new items for inbox
-tag_search(db, 'tag:new', '+inbox', '-new')
+tag_search(db, 'tag:new', '-new')
 
 # Thaw new messages
 for msg in q_new.search_messages():
