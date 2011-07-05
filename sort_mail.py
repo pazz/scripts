@@ -27,7 +27,7 @@ _tags = [
         ('agda-course@inf.ed.ac.uk', ['list','agda']),
         ('folder:uoe/Call4Papers', ['C4P']),
 
-        ('from:Patrick Totzke', ['sent','-unread']), #send by me
+        ('from:Patrick Totzke', ['sent','-unread', '-inbox']), #send by me
         ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
         ('from:wols', ['soc','wols']), # whiskey soc
         ]
