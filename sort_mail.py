@@ -12,25 +12,25 @@ LOGLEVEL = logging.INFO
 start_time = time.time()
 
 _tags = [
-        ('peergroup', ['list','peergroup']),
-        ('urwid', ['list','urwid']),
-        ('notmuch', ['list','notmuch']),
-        ('notmuch and emacs', ['-inbox']),
-        ('atp-vim-list@lists.sourceforge.net', ['list','atp']),
-        ('sup-talk@rubyforge.org OR sup-devel@rubyforge.org', ['list','sup']),
+    ('peergroup', ['list','peergroup']),
+    ('urwid', ['list','urwid']),
+    ('to:notmuch@notmuchmail.org', ['list','notmuch']),
+    ('to:notmuch@notmuchmail.org and subject:emacs', ['-inbox']),
+    ('to:atp-vim-list@lists.sourceforge.net', ['list','atp']),
+    ('to:sup-talk@rubyforge.org OR to:sup-devel@rubyforge.org', ['list','sup']),
 
-        ('lfcs-interest@inf.ed.ac.uk', ['list','lfcs']),
-        ('students@inf.ed.ac.uk', ['list','students']),
-        ('research-degree-students@inf.ed.ac.uk', ['list','gradschool']),
-        ('sicsa-students@sicsa.ac.uk', ['list','sicsa']),
-        ('automata-team@fit.vutbr.cz', ['list','automata']),
-        ('agda-course@inf.ed.ac.uk', ['list','agda']),
-        ('folder:uoe/Call4Papers', ['C4P']),
+    ('lfcs-interest@inf.ed.ac.uk', ['list','lfcs']),
+    ('students@inf.ed.ac.uk', ['list','students']),
+    ('research-degree-students@inf.ed.ac.uk', ['list','gradschool']),
+    ('sicsa-students@sicsa.ac.uk', ['list','sicsa']),
+    ('automata-team@fit.vutbr.cz', ['list','automata']),
+    ('agda-course@inf.ed.ac.uk', ['list','agda']),
+    ('folder:uoe/Call4Papers', ['C4P']),
 
-        ('from:Patrick Totzke', ['sent','-unread', '-inbox']), #send by me
-        ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
-        ('from:wols', ['soc','wols']), # whiskey soc
-        ]
+    ('from:Patrick Totzke', ['sent','-unread', '-inbox']), #send by me
+    ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
+    ('to:wols@lists.ed.ac.uk', ['soc','wols']), # whiskey soc
+]
 
 
 
@@ -81,7 +81,7 @@ for msg in q_new.search_messages():
     q = notmuch.Query(db, 'tag:killed and thread:%s' % msg.get_thread_id())
     if len(list(q.search_messages())) > 0:
         logging.debug('killing %s' % msg.get_message_id())
-        tag_message(msg, 'killed', '-new')
+        tag_message(msg, 'killed', '-inbox')
 
 # Tag remaining new items for inbox
 tag_search(db, 'tag:new', '-new')
