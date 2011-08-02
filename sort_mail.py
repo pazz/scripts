@@ -25,11 +25,14 @@ _tags = [
     ('sicsa-students@sicsa.ac.uk', ['list','sicsa']),
     ('automata-team@fit.vutbr.cz', ['list','automata']),
     ('agda-course@inf.ed.ac.uk', ['list','agda']),
+    ('pa-meetings or subject:[PA]', ['PA']),
     ('folder:uoe/Call4Papers', ['C4P']),
 
     ('from:Patrick Totzke', ['sent','-unread', '-inbox']), #send by me
     ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
     ('to:wols@lists.ed.ac.uk', ['soc','wols']), # whiskey soc
+
+    ('folder:gmail/G+', ['G+']),
 ]
 
 
