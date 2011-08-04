@@ -23,6 +23,11 @@ _tags = [
     ('students@inf.ed.ac.uk', ['list','students']),
     ('research-degree-students@inf.ed.ac.uk', ['list','gradschool']),
     ('sicsa-students@sicsa.ac.uk', ['list','sicsa']),
+    ('to:inf-general@inf.ed.ac.uk', ['list', 'forum']),
+    ('to:inf-people@inf.ed.ac.uk', ['list', 'forum']),
+    ('to:sys-announce@inf.ed.ac.uk', ['list', 'forum']),
+    ('to:seminars@inf.ed.ac.uk', ['list', 'seminars']),
+
     ('automata-team@fit.vutbr.cz', ['list','automata']),
     ('agda-course@inf.ed.ac.uk', ['list','agda']),
     ('pa-meetings or subject:[PA]', ['PA']),
