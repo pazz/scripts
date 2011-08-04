@@ -27,6 +27,7 @@ _tags = [
     ('to:inf-people@inf.ed.ac.uk', ['list', 'forum']),
     ('to:sys-announce@inf.ed.ac.uk', ['list', 'forum']),
     ('to:seminars@inf.ed.ac.uk', ['list', 'seminars']),
+    ('edlug@lists.ed.ac.uk', ['list','edlug']),
 
     ('automata-team@fit.vutbr.cz', ['list','automata']),
     ('agda-course@inf.ed.ac.uk', ['list','agda']),
