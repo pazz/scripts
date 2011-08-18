@@ -13,11 +13,12 @@ start_time = time.time()
 
 _tags = [
     ('peergroup', ['list','peergroup']),
-    ('urwid', ['list','urwid']),
+    ('to:urwid@lists.excess.org', ['list','urwid']),
     ('to:notmuch@notmuchmail.org', ['list','notmuch']),
     ('to:notmuch@notmuchmail.org and subject:emacs', ['-inbox']),
     ('to:atp-vim-list@lists.sourceforge.net', ['list','atp']),
     ('to:sup-talk@rubyforge.org OR to:sup-devel@rubyforge.org', ['list','sup']),
+    ('subject:[alot]', ['alot']),
 
     ('lfcs-interest@inf.ed.ac.uk', ['list','lfcs']),
     ('students@inf.ed.ac.uk', ['list','students']),

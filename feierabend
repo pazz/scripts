@@ -1,4 +1,4 @@
 #!/bin/bash
-urxvt -e editmoin http://localhost/journal/`date -I $*`
+urxvt -e editmoin -t journalTemplate http://localhost/journal/`date -I $*`
 killall offlineimap
 echo "awesome.quit()" |awesome-client
