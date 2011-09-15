@@ -15,6 +15,7 @@ _tags = [
     ('peergroup', ['list','peergroup']),
     ('to:urwid@lists.excess.org', ['list','urwid']),
     ('to:notmuch@notmuchmail.org', ['list','notmuch', '-inbox']),
+    ('subject:alot', ['alot']),
     ('to:notmuch@notmuchmail.org and subject:emacs', ['-inbox']),
     ('to:atp-vim-list@lists.sourceforge.net', ['list','atp']),
     ('to:sup-talk@rubyforge.org OR to:sup-devel@rubyforge.org', ['list','sup']),
@@ -27,13 +28,12 @@ _tags = [
     ('to:inf-general@inf.ed.ac.uk', ['list', 'forum']),
     ('to:inf-people@inf.ed.ac.uk', ['list', 'forum']),
     ('to:sys-announce@inf.ed.ac.uk', ['list', 'forum']),
-    ('to:seminars@inf.ed.ac.uk', ['list', 'seminars']),
+    ('to:seminars@inf.ed.ac.uk OR subject:[seminars]', ['list', 'seminars']),
     ('edlug@lists.ed.ac.uk', ['list','edlug']),
 
     ('automata-team@fit.vutbr.cz', ['list','automata']),
-    ('agda-course@inf.ed.ac.uk', ['list','agda']),
     ('pa-meetings or subject:[PA]', ['PA']),
-    ('folder:uoe/Call4Papers', ['C4P']),
+    ('folder:uoe/Call4Papers', ['C4P', '-inbox']),
 
     ('from:Patrick Totzke', ['sent','-unread', '-inbox']), #send by me
     ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
