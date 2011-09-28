@@ -40,6 +40,8 @@ _tags = [
     ('to:wols@lists.ed.ac.uk', ['soc','wols']), # whiskey soc
 
     ('folder:gmail/G+', ['G+']),
+    ('wczerwin@duch.mimuw.edu.pl OR ph209519@mimuw.edu.pl
+      OR \"Piotrek Hofman\" OR \"Wojciech Czerwiński\" OR (Colin AND BPP)', ['BPP']),
 ]
 
 
