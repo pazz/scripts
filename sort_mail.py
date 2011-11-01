@@ -18,7 +18,7 @@ _tags = [
     ('subject:alot', ['alot']),
     ('to:notmuch@notmuchmail.org and subject:emacs', ['-inbox']),
     ('to:atp-vim-list@lists.sourceforge.net', ['list','atp']),
-    ('to:sup-talk@rubyforge.org OR to:sup-devel@rubyforge.org', ['list','sup']),
+    ('to:sup-talk@rubyforge.org OR to:sup-devel@rubyforge.org', ['list','sup', '-inbox']),
     ('subject:[alot]', ['alot']),
 
     ('lfcs-interest@inf.ed.ac.uk', ['list','lfcs']),
@@ -29,7 +29,12 @@ _tags = [
     ('to:inf-people@inf.ed.ac.uk', ['list', 'forum']),
     ('to:sys-announce@inf.ed.ac.uk', ['list', 'forum']),
     ('to:seminars@inf.ed.ac.uk OR subject:[seminars]', ['list', 'seminars']),
-    ('to:seminars@inf.ed.ac.uk AND from:hlow@exseed.ed.ac.uk', ['-inbox']),
+# uninterestign seminars
+    ('to:lingcirc@ling.ed.ac.uk', ['-inbox']),
+    ('to:ianc-talks@inf.ed.ac.uk', ['-inbox']),
+    ('to:ilcc-hcrc-seminar@inf.ed.ac.uk', ['-inbox']),
+
+    ('to:seminars@inf.ed.ac.uk AND (from:hlow@exseed.ed.ac.uk OR from:hlow@staffmail.ed.ac.uk)', ['-inbox']),
     ('edlug@lists.ed.ac.uk', ['list','edlug']),
 
     ('automata-team@fit.vutbr.cz', ['list','automata']),
