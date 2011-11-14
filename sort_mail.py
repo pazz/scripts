@@ -33,12 +33,13 @@ _tags = [
     ('to:lingcirc@ling.ed.ac.uk', ['-inbox']),
     ('to:ianc-talks@inf.ed.ac.uk', ['-inbox']),
     ('to:ilcc-hcrc-seminar@inf.ed.ac.uk', ['-inbox']),
+    ('to:ipab-members@inf.ed.ac.uk', ['-inbox']),
 
     ('to:seminars@inf.ed.ac.uk AND (from:hlow@exseed.ed.ac.uk OR from:hlow@staffmail.ed.ac.uk)', ['-inbox']),
     ('edlug@lists.ed.ac.uk', ['list','edlug']),
 
     ('automata-team@fit.vutbr.cz', ['list','automata']),
-    ('pa-meetings or subject:[PA]', ['PA']),
+    ('pa-meetings or subject:"[PA]"', ['PA']),
     ('folder:uoe/Call4Papers', ['C4P', '-inbox']),
 
     ('from:Patrick Totzke', ['sent','-unread', '-inbox']), #send by me
