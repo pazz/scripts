@@ -29,5 +29,6 @@ function gnome-keyring-control() {
 
 gnome-keyring-control
 
-/usr/local/bin/offlineimap -c /home/pazz/.offlineimaprc -o -u Noninteractive.Basic && /usr/local/bin/notmuch new && /home/pazz/bin/sort_mail.py
+#/usr/local/bin/offlineimap -c /home/pazz/.offlineimaprc -o -u Noninteractive.Basic && /usr/local/bin/notmuch new && /home/pazz/bin/sort_mail.py
+/home/pazz/.local/bin/offlineimap -c /home/pazz/.offlineimaprc -o && /usr/local/bin/notmuch new && /home/pazz/.local/bin/afew --tag --new
 
