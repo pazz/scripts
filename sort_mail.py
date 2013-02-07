@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
-#this is based on http://notmuchmail.org/pipermail/notmuch/2011/003976.html
+# this is based on http://notmuchmail.org/pipermail/notmuch/2011/003976.html
+# I retired this script in favour of afew: https://github.com/teythoon/afew
 
 import os
 import logging
@@ -14,40 +15,8 @@ start_time = time.time()
 _tags = [
     ('peergroup', ['list','peergroup']),
     ('to:urwid@lists.excess.org', ['list','urwid']),
-    ('to:notmuch@notmuchmail.org', ['list','notmuch']),
-    ('subject:alot', ['alot']),
-    ('to:notmuch@notmuchmail.org and subject:emacs', ['-inbox']),
-    ('to:atp-vim-list@lists.sourceforge.net', ['list','atp']),
-    ('to:sup-talk@rubyforge.org OR to:sup-devel@rubyforge.org', ['list','sup', '-inbox']),
-    ('subject:[alot]', ['alot']),
-
-    ('lfcs-interest@inf.ed.ac.uk', ['list','lfcs']),
-    ('students@inf.ed.ac.uk', ['list','students']),
-    ('research-degree-students@inf.ed.ac.uk', ['list','gradschool']),
-    ('sicsa-students@sicsa.ac.uk', ['list','sicsa']),
-    ('to:inf-general@inf.ed.ac.uk', ['list', 'forum']),
-    ('to:inf-people@inf.ed.ac.uk', ['list', 'forum']),
-    ('to:sys-announce@inf.ed.ac.uk', ['list', 'forum']),
-    ('to:seminars@inf.ed.ac.uk OR subject:[seminars]', ['list', 'seminars']),
-# uninterestign seminars
-    ('to:lingcirc@ling.ed.ac.uk', ['-inbox']),
-    ('to:ianc-talks@inf.ed.ac.uk', ['-inbox']),
-    ('to:ilcc-hcrc-seminar@inf.ed.ac.uk', ['-inbox']),
-    ('to:ipab-members@inf.ed.ac.uk', ['-inbox']),
-
-    ('to:seminars@inf.ed.ac.uk AND (from:hlow@exseed.ed.ac.uk OR from:hlow@staffmail.ed.ac.uk)', ['-inbox']),
-    ('edlug@lists.ed.ac.uk', ['list','edlug']),
-
-    ('automata-team@fit.vutbr.cz', ['list','automata']),
-    ('pa-meetings or subject:"[PA]"', ['PA']),
-    ('folder:uoe/Call4Papers', ['C4P', '-inbox']),
-
-    ('from:Patrick Totzke', ['sent','-unread', '-inbox']), #send by me
-    ('from:foosoc.ed@gmail.com or from:GT Silber', ['soc','foo']), #foo soc
     ('to:wols@lists.ed.ac.uk', ['soc','wols']), # whiskey soc
-
     ('folder:gmail/G+', ['G+']),
-    (u'wczerwin@duch.mimuw.edu.pl OR ph209519@mimuw.edu.pl OR \"Piotrek Hofman\" OR \"Wojciech Czerwi\xc5ski\" OR (Colin AND BPP)', ['BPP']),
 ]
 
 
