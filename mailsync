@@ -1,4 +1,0 @@
-#!/bin/bash
-# * * * * * $HOME/bin/mailsync #in crontab
-export $(gnome-keyring-daemon -s)
-/usr/bin/offlineimap -o -u Noninteractive.Quiet &2>/dev/null
